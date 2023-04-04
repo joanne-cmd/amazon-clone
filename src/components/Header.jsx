@@ -1,34 +1,51 @@
 import React from 'react'
 import './Header.css'
+import SearchIcon from "@material-ui/icons/Search";
+import ShoppingBasket  from '@material-ui/icons/ShoppingBasket';
 
 function Header() {
   return (
-    <div className='header'>
-        <img
-            className='header__logo'
-            src='https://w7.pngwing.com/pngs/732/34/png-transparent-logo-amazon-com-brand-flipkart-others-text-orange-logo.png'
-            alt='amazon'
-        />
+    <div className="header">
+      
+      <img
+        className="header__logo"
+        src="http://pngimg.com/uploads/amazon/amazon_PNG11.png"
+        alt='logo'
+      />
+  
 
-        <div className='header__search'>
-            <input className='header__searchInput'type="text"/>
-            {/* logo */}
-        </div>
+      <div className="header__search">
+        <input className="header__searchInput" type="text" />
+        <SearchIcon className="header__searchIcon" />
+      </div>
 
-        <div className='header__nav'>
-        <div className='header__option'>
+      <div className="header__nav">
+        
+          <div className="header__option">
+            <span className="header__optionLineOne">Hello Guest</span>
+            <span className="header__optionLineTwo">Sign In</span>
+          </div>
+        
 
-        </div>
+        
+          <div className="header__option">
+            <span className="header__optionLineOne">Returns</span>
+            <span className="header__optionLineTwo">& Orders</span>
+          </div>
+        
+        
 
-        <div className='header__option'>
+          <div className="header__option">
+            <span className="header__optionLineOne">Your</span>
+            <span className="header__optionLineTwo">Prime</span>
+          </div>
 
-        </div>
+          <div className='header__optionBasket'>
+            <ShoppingBasket/>
+            <span className='header__optionLineTwo header__basketCount'>0</span>
+          </div>
 
-        <div className='header__option'>
-
-        </div>
-
-        </div>
+      </div>
 
     </div>
   )
